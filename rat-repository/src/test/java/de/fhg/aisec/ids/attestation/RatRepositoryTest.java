@@ -17,6 +17,7 @@
  * limitations under the License.
  * =========================LICENSE_END==================================
  */
+/*
 package de.fhg.aisec.ids.attestation;
 
 import com.google.gson.Gson;
@@ -50,7 +51,8 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /** Unit test for ratRepositoryTest */
-public class RatRepositoryTest {
+
+/*public class RatRepositoryTest {
 
   private static RemoteAttestationServer ratServer;
   private static Pcr[] values;
@@ -284,3 +286,4 @@ public class RatRepositoryTest {
     return null;
   }
 }
+*/
