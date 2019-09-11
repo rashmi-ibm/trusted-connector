@@ -76,8 +76,14 @@ public class RatRepositoryTest {
 
   @BeforeClass
   public static void initRepo() {
-    ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
-    ratServer.start();
+    try{
+      ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
+      ratServer.start();
+    }catch(Exception e){
+       System.out.println("NEW Error::::" + e);
+    }
+    
+    
 
     // Create a trust manager that does not validate certificate chains
     TrustManager[] trustAllCerts =
