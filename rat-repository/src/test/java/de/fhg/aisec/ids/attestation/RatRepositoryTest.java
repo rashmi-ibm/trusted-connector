@@ -77,6 +77,7 @@ public class RatRepositoryTest {
   @BeforeClass
   public static void initRepo() {
     try {
+      System.out.println("here...");
     ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
     ratServer.start();
 
