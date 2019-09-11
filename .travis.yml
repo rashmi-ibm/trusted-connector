@@ -1,8 +1,6 @@
 language: java
-os:
-  - linux-ppc64le
 jdk:
-  - openjdk8
+  - oraclejdk8
 services:
   - docker
 before_cache:
