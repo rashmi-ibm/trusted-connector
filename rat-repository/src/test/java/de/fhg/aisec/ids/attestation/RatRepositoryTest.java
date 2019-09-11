@@ -76,6 +76,7 @@ public class RatRepositoryTest {
 
   @BeforeClass
   public static void initRepo() {
+    try {
     ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
     ratServer.start();
 
@@ -106,6 +107,9 @@ public class RatRepositoryTest {
           System.out.println("Warning: URL Host: " + urlHostName + " vs. " + session.getPeerHost());
           return true;
         };
+      } catch (Exception e) {
+      System.out.println("Rashmi Error" + e);
+    }
   }
 
   @AfterClass
