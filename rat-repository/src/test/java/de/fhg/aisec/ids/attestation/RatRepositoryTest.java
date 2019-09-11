@@ -111,6 +111,10 @@ public class RatRepositoryTest {
   public static void closeRepo() {
     ratServer = null;
   }
+  
+  @Test
+  public void testURL() throws MalformedURLException {
+  }
 
   /*
   @Test
