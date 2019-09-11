@@ -122,6 +122,14 @@ public class RatRepositoryTest {
 
   @Test
   public void testURL() throws MalformedURLException {
+    if(null != ratServer) {
+      System.out.println("*********");
+    LOG.info("**URI : " + ratServer.getURI());
+    }
+    else  {
+      System.out.println("***#####******");
+      LOG.info("**SERVER IS NULLL : ");
+    }
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
 
