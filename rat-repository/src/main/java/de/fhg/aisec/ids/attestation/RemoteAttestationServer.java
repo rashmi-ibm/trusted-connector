@@ -40,6 +40,7 @@ public class RemoteAttestationServer {
   private static final Logger LOG = LoggerFactory.getLogger(Database.class);
 
   public RemoteAttestationServer(String host, String path, int port) {
+    System.out.println("**Stmt---1**");
     this.database = new Database();
     try {
       System.out.println("**Stmt1**");
