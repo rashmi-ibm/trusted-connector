@@ -17,7 +17,7 @@
  * limitations under the License.
  * =========================LICENSE_END==================================
  */
-/*
+
 package de.fhg.aisec.ids.attestation;
 
 import com.google.gson.Gson;
@@ -51,7 +51,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /** Unit test for ratRepositoryTest */
-/*public class RatRepositoryTest {
+public class RatRepositoryTest {
 
   private static RemoteAttestationServer ratServer;
   private static Pcr[] values;
@@ -112,6 +112,7 @@ import static org.junit.Assert.*;
     ratServer = null;
   }
 
+  /*
   @Test
   public void testURL() throws MalformedURLException {
     assertEquals(sURL, ratServer.getURI().toURL().toString());
@@ -257,7 +258,7 @@ import static org.junit.Assert.*;
     assertEquals(IdsAttestationType.ALL, result.getAttestationRepositoryResponse().getAtype());
     assertTrue(result.getAttestationRepositoryResponse().getResult());
   }
-
+ */
   private ConnectorMessage send(ConnectorMessage msg) {
     try {
       HttpsURLConnection urlc = (HttpsURLConnection) new URL(sURL).openConnection();
@@ -285,4 +286,4 @@ import static org.junit.Assert.*;
     return null;
   }
 }
-*/
+
