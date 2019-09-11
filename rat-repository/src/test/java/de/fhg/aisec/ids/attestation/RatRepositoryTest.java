@@ -112,12 +112,7 @@ public class RatRepositoryTest {
     ratServer = null;
   }
   
- @Test
-  public void testDatabaseIsRunning() throws SQLException {
-    assertFalse(ratServer.getDatabase().getConnection().isClosed());
-  }
-
-  /*
+ 
   @Test
   public void testURL() throws MalformedURLException {
     System.out.println("**ratServer::" + ratServer);
@@ -125,7 +120,7 @@ public class RatRepositoryTest {
     //assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
 
-  
+  /*
   @Test
   public void testDatabaseIsRunning() throws SQLException {
     assertFalse(ratServer.getDatabase().getConnection().isClosed());
