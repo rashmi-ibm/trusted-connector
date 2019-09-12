@@ -44,6 +44,7 @@ public class RemoteAttestationServer {
       this.database = new Database();
     }catch(Exception e){
       System.out.println("Here Error..");
+      LOG.info("ERRooooR");
     }
     try {
       this.uri = new URI(String.format("https://%s:%d/%s", host, port, path));
