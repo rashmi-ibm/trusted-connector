@@ -54,9 +54,13 @@ public class Database {
 
   public Database() {
     try {
+      System.out.println("Here 11..");
       makeJDBCConnection();
+      System.out.println("Here 12..");
       createTables();
+      System.out.println("Here 13..");
       insertDefaultConfiguration();
+      System.out.println("Here 14..");
     } catch (SQLException e) {
       throw new IllegalStateException(e);
     }
