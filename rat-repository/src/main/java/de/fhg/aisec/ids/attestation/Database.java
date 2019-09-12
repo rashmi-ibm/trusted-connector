@@ -57,6 +57,7 @@ public class Database {
       LOG.error("ERR..****");
       System.out.println("Here 11..");
       makeJDBCConnection();
+      LOG.error("ERR 2..****");
       System.out.println("Here 12..");
       createTables();
       System.out.println("Here 13..");
