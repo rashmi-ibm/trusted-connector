@@ -120,12 +120,12 @@ public class RatRepositoryTest {
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
 
-  /*
+  
   @Test
   public void testDatabaseIsRunning() throws SQLException {
     assertFalse(ratServer.getDatabase().getConnection().isClosed());
   }
-
+/*
   @Test
   public void testDefaultConfiguration() throws SQLException, IOException {
     Gson gson =
