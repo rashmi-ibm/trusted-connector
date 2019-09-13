@@ -1,6 +1,4 @@
 language: java
-os:
-  - linux-ppc64le
 jdk:
   - openjdk8
 services:
@@ -14,4 +12,4 @@ cache:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 install: true
-script: ./gradlew --parallel clean build --stacktrace
+script: ./gradlew --parallel clean build dockerize
