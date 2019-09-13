@@ -17,7 +17,6 @@
  * limitations under the License.
  * =========================LICENSE_END==================================
  */
-
 package de.fhg.aisec.ids.attestation;
 
 import com.google.gson.Gson;
@@ -51,7 +50,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /** Unit test for ratRepositoryTest */
-
 public class RatRepositoryTest {
 
   private static RemoteAttestationServer ratServer;
@@ -76,12 +74,8 @@ public class RatRepositoryTest {
 
   @BeforeClass
   public static void initRepo() {
-    try{
       ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
       ratServer.start();
-    }catch(Exception e){
-       System.out.println("NEW Error::::" + e);
-    }
     
     
 
@@ -133,7 +127,7 @@ public class RatRepositoryTest {
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
 
-  /*
+  
   @Test
   public void testDatabaseIsRunning() throws SQLException {
     assertFalse(ratServer.getDatabase().getConnection().isClosed());
@@ -274,7 +268,7 @@ public class RatRepositoryTest {
     assertEquals(IdsAttestationType.ALL, result.getAttestationRepositoryResponse().getAtype());
     assertTrue(result.getAttestationRepositoryResponse().getResult());
   }
-*/
+
   private ConnectorMessage send(ConnectorMessage msg) {
     try {
       HttpsURLConnection urlc = (HttpsURLConnection) new URL(sURL).openConnection();
