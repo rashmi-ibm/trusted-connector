@@ -74,10 +74,8 @@ public class RatRepositoryTest {
 
   @BeforeClass
   public static void initRepo() {
-      ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
-      ratServer.start();
-    
-    
+    ratServer = new RemoteAttestationServer("127.0.0.1", PATH, PORT);
+    ratServer.start();
 
     // Create a trust manager that does not validate certificate chains
     TrustManager[] trustAllCerts =
@@ -116,17 +114,8 @@ public class RatRepositoryTest {
 
   @Test
   public void testURL() throws MalformedURLException {
-    if(null != ratServer) {
-      System.out.println("*********");
-    LOG.info("**URI : " + ratServer.getURI());
-    }
-    else  {
-      System.out.println("***#####******");
-      LOG.info("**SERVER IS NULLL : ");
-    }
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
-
   
   @Test
   public void testDatabaseIsRunning() throws SQLException {
