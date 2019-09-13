@@ -40,10 +40,8 @@ public class RemoteAttestationServer {
   private static final Logger LOG = LoggerFactory.getLogger(Database.class);
 
   public RemoteAttestationServer(String host, String path, int port) {
-    System.out.println("**Stmt---1**");
     this.database = new Database();
     try {
-      System.out.println("**Stmt1**");
       this.uri = new URI(String.format("https://%s:%d/%s", host, port, path));
       LOG.debug("Remote Attestation Repository starting on : " + this.uri.toURL().toString());
       server = new Server();
@@ -95,21 +93,16 @@ public class RemoteAttestationServer {
       handler.setContextPath("");
       handler.addServlet(new ServletHolder(new ServletContainer(resourceConfig())), "/*");
       server.setHandler(handler);
-      System.out.println("**Stmt2**");
     } catch (URISyntaxException | MalformedURLException e) {
       LOG.debug("could not format URI !");
-      System.out.println("** Stmt3  -- ERROR **");
       e.printStackTrace();
     }
   }
 
   public void start() {
     try {
-      System.out.println("**Stmt4**");
       server.start();
-      System.out.println("**Stmt5**");
     } catch (Exception e) {
-      System.out.println("**Stmt6**");
       throw new RuntimeException("Could not start the server", e);
     }
   }
