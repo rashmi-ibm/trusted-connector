@@ -103,7 +103,7 @@ public class RatRepositoryTest {
         (urlHostName, session) -> {
           System.out.println("Warning: URL Host: " + urlHostName + " vs. " + session.getPeerHost());
           return true;
-        };   
+        };
   }
 
   @AfterClass
@@ -115,7 +115,7 @@ public class RatRepositoryTest {
   public void testURL() throws MalformedURLException {
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
-  
+
   @Test
   public void testDatabaseIsRunning() throws SQLException {
     assertFalse(ratServer.getDatabase().getConnection().isClosed());
