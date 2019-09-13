@@ -103,8 +103,7 @@ public class RatRepositoryTest {
         (urlHostName, session) -> {
           System.out.println("Warning: URL Host: " + urlHostName + " vs. " + session.getPeerHost());
           return true;
-        };
-      
+        };   
   }
 
   @AfterClass
