@@ -40,12 +40,8 @@ public class RemoteAttestationServer {
   private static final Logger LOG = LoggerFactory.getLogger(Database.class);
 
   public RemoteAttestationServer(String host, String path, int port) {
-    try{
-      this.database = new Database();
-    }catch(Exception e){
-      System.out.println("Here Error..");
-      LOG.info("ERRooooR");
-    }
+    this.database = new Database();
+    
     try {
       this.uri = new URI(String.format("https://%s:%d/%s", host, port, path));
       LOG.debug("Remote Attestation Repository starting on : " + this.uri.toURL().toString());
