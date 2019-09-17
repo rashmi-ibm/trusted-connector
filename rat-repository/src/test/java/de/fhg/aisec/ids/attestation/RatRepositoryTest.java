@@ -115,8 +115,6 @@ public class RatRepositoryTest {
  
   @Test
   public void testURL() throws MalformedURLException {
-    System.out.println("**ratServer::" + ratServer);
-    //System.out.println("**uri::" + ratServer.getURI());
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
 
@@ -125,7 +123,7 @@ public class RatRepositoryTest {
   public void testDatabaseIsRunning() throws SQLException {
     assertFalse(ratServer.getDatabase().getConnection().isClosed());
   }
-/*
+
   @Test
   public void testDefaultConfiguration() throws SQLException, IOException {
     Gson gson =
@@ -261,7 +259,7 @@ public class RatRepositoryTest {
     assertEquals(IdsAttestationType.ALL, result.getAttestationRepositoryResponse().getAtype());
     assertTrue(result.getAttestationRepositoryResponse().getResult());
   }
- */
+ 
   private ConnectorMessage send(ConnectorMessage msg) {
     try {
       HttpsURLConnection urlc = (HttpsURLConnection) new URL(sURL).openConnection();
