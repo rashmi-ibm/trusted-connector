@@ -17,7 +17,6 @@
  * limitations under the License.
  * =========================LICENSE_END==================================
  */
-
 package de.fhg.aisec.ids.attestation;
 
 import com.google.gson.Gson;
@@ -112,13 +111,11 @@ public class RatRepositoryTest {
     ratServer = null;
   }
   
- 
   @Test
   public void testURL() throws MalformedURLException {
     assertEquals(sURL, ratServer.getURI().toURL().toString());
   }
 
-  
   @Test
   public void testDatabaseIsRunning() throws SQLException {
     assertFalse(ratServer.getDatabase().getConnection().isClosed());
@@ -287,4 +284,3 @@ public class RatRepositoryTest {
     return null;
   }
 }
-
